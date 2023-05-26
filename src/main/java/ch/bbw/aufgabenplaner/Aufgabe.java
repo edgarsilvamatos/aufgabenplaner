@@ -6,5 +6,4 @@ public class Aufgabe {
     public String Task;
     public String Notizen;
     public LocalDate Datum;
-    public boolean newsletter;
 }
