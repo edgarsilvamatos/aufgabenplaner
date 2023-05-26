@@ -8,7 +8,7 @@ public class AufgabenplanerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AufgabenplanerApplication.class, args);
-		system.out.print("Hello World")
+		System.out.print("Hello World");
 
 	}
 
