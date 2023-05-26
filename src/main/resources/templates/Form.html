@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AufgabenPlaner</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/stylesheet.css">
+</head>
+
+<body>
+<div style="margin: 20px; width: 60%">
+    <form>
+        <div class="field"></div>
+        <label class="label is-danger" for="name">Aufgabe:</label>
+        <div class="control">
+            <input class="input generalField" type="text" id="name" name="name" maxlength="32">
+        </div>
+
+        <div class="field">
+        <label class="label" for="beschreibung">Notizen:</label>
+        <div class="control">
+            <textarea class="textarea generalField" id="beschreibung" name="notizen" maxlength="128"></textarea>
+        </div>
+
+        <div class="field">
+        <label class="label" for="datum">Datum:</label>
+        <div class="control">
+            <input class="input generalField" type="date" id="datum" name="datum" required="True">
+        </div>
+
+        <div class="field">
+            <button class="button is-primary" type="submit" style="background-color: #5790c7; margin-top: 12px">
+                Aufgabe speichern
+            </button>
+        </div>
+    </form>
+</div>
+</body>
+
+</html>
