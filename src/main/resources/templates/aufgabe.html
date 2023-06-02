@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <title>AufgabenPlaner</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="static/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/stylesheet.css}">
 </head>
 
 
 <body>
+<div class="columns is-centered">
+    <div class="column is-half" style="margin-top: 20px;">
+        <h1 class="title has-text-centered"><u>Aufgaben Planer</u></h1>
+    </div>
+</div>
 <div style="margin: 50px; width: 60%; border: 2px solid pink">
     <form th:action="@{/aufgabe_hinzugefuegt}" th:object="${aufgabe}" method="post">
         <div class="field"></div>
