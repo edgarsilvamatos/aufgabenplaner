@@ -30,9 +30,11 @@
         </div>
 
         <div class="field">
+            <form th:action="@{/aufgabe_hinzugefuegt}" th:object="${aufgabe}" method="post">
             <button class="button is-primary" type="submit" style="background-color: #5790c7; margin-top: 12px">
                 Aufgabe speichern
             </button>
+            </form>
         </div>
     </form>
 </div>
