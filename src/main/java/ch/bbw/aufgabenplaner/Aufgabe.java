@@ -1,9 +1,9 @@
 package ch.bbw.aufgabenplaner;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 public class Aufgabe {
+
     public String bezeichnung;
     public String notizen;
     public LocalDate datum;
