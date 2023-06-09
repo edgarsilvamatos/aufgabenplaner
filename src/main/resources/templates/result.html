@@ -15,10 +15,10 @@
     <br>
 
         <div th:each="aufgabe: ${aufgaben}" style="border-style: solid; border-color: red; min-height: 30px; margin-top: 15px;">
-            <div style="float:left;"><p th:text="${aufgabe.bezeichnung}"/></div>
+            <div style="float:left; margin-left: 5px;"><p th:text="${aufgabe.bezeichnung}"/></div>
             <div style="float:right;">
-                <div style="float: left;"><p th:text="${aufgabe.notizen}"/></div>
-                <div style="float: right"><p th:text="${aufgabe.datum}"/></div>
+                <div style="float: left; margin-right: 25px;"><p th:text="${aufgabe.notizen}"/></div>
+                <div style="float: right; margin-right: 5px;"><p th:text="${aufgabe.datum}"/></div>
             </div>
         </div>
     </body>
