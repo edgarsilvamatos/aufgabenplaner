@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,11 @@
 </div>
 
 <button onclick="window.location.href='/';"> Aufgabe hinzfügen </button>
-<p th:text="'Aufgaben: ' + ${aufgaben}">gugus</p>
+<br>
+
+<div th:each="aufgabe: ${aufgaben}">
+    <p th:text="${aufgabe.bezeichnung}"/>
+</div>
 </body>
 
 </html>
