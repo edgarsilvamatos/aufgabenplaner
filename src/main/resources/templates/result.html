@@ -10,10 +10,8 @@
                 <h1 class="title has-text-centered"><u>Aufgaben Planer</u></h1>
             </div>
         </div>
-
     <button onclick="window.location.href='/';"> Aufgabe hinzfügen </button>
     <br>
-
         <div th:each="aufgabe: ${aufgaben}" style="border-style: solid; border-color: red; min-height: 30px; margin-top: 15px;">
             <div style="float:left; margin-left: 5px;"><p th:text="${aufgabe.bezeichnung}"/></div>
             <div style="float:right;">
