@@ -3,40 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>AufgabenPlaner</title>
+    <title th:text="#{aufgabe.page_title}"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body>
 <div class="columns is-centered">
     <div class="column is-half" style="margin-top: 20px;">
-        <h1 class="title has-text-centered"><u>Aufgaben Planer</u></h1>
+        <u><h1 class="title has-text-centered" th:text="#{aufgabe.title}"/></u>
     </div>
 </div>
 <div style="margin: 50px; width: 60%; border: 2px solid pink">
     <form th:action="@{/aufgabe_hinzugefuegt}" th:object="${aufgabe}" method="post">
         <div class="field"></div>
-        <label class="label is-danger" for="bezeichnung">Aufgabe:</label>
+        <label class="label is-danger" for="bezeichnung" th:text="#{aufgabe.label.bezeichnung}"/>
         <div class="control">
             <input class="input generalField" type="text" id="bezeichnung" name="bezeichnung" maxlength="24" required="True">
         </div>
 
         <div class="field">
-            <label class="label" for="beschreibung">Notizen:</label>
+            <label class="label" for="beschreibung" th:text="#{aufgabe.label.notes}"/>
             <div class="control">
                 <textarea class="textarea generalField" id="beschreibung" name="notizen" maxlength="64"></textarea>
             </div>
 
             <div class="field">
-                <label class="label" for="datum">Datum:</label>
+                <label class="label" for="datum" th:text="#{aufgabe.label.date}"/>
                 <div class="control">
                     <input class="input generalField" type="date" id="datum" name="datum" required="True">
                 </div>
 
                 <div class="field">
-                        <button class="button is-primary" type="submit" style="background-color: #5790c7; margin-top: 12px">
-                            Aufgabe speichern
-                        </button>
+                        <button class="button is-primary" type="submit" style="background-color: #5790c7; margin-top: 12px" th:text="#{aufgabe.button.save}"/>
                 </div>
             </div>
         </div>
