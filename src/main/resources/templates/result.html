@@ -5,19 +5,20 @@
         <title th:text="#{result.page.title}"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     </head>
-    <body style="min-height: 100%; position: fixed; background-color: #FFDFD3; width: 100%">
+    <body style="min-height: 100%; position: fixed; background-color: #FFDFD3; width: 100%; ">
         <div class="columns is-centered">
             <div class="column is-half" style="margin-top: 20px;">
                 <u><h1 class="title has-text-centered" th:text="#{result.title}"/></u>
             </div>
         </div>
-    <button onclick="window.location.href='/';" th:text="#{result.button.add_task}"/>
+    <button class="button is-primary" onclick="window.location.href='/';" th:text="#{result.button.add_task}" style="background-color: #D291BC; margin-top: 12px; margin-left: 17%;"/>
     <br>
-        <div th:each="aufgabe: ${aufgaben}" style="border-style: solid; border-color: red; min-height: 30px; margin-top: 15px;">
-            <div style="float:left; margin-left: 5px;"><p th:text="${aufgabe.bezeichnung}"/></div>
+        <div th:each="aufgabe: ${aufgaben}" style="border: 2px solid #D291BC; height: 75px; margin-top: 15px; width: 70%;
+         margin-left: 15%; font-size: 24px; font-family: Serif; border-radius: 20px; background-color: #FEC8D8">
+            <div style="float:left; margin-left: 5px; margin-top: 14px"><p th:text="${aufgabe.bezeichnung}"/></div>
             <div style="float:right;">
-                <div style="float: left; margin-right: 25px;"><p th:text="${aufgabe.notizen}"/></div>
-                <div style="float: right; margin-right: 5px;"><p th:text="${aufgabe.datum}"/></div>
+                <div style="float: left; margin-right: 25px;margin-top: 14px"><p th:text="${aufgabe.notizen}"/></div>
+                <div style="float: right; margin-right: 5px;margin-top: 14px"><p th:text="${aufgabe.datum}"/></div>
             </div>
         </div>
     </body>
