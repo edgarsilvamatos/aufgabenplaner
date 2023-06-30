@@ -1,18 +1,18 @@
 package ch.bbw.aufgabenplaner;
 
 import jakarta.persistence.Entity;
-import lombok.AllArgsConstructor;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 public class Aufgabe {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public String bezeichnung;
     public String notizen;
     public LocalDate datum;
