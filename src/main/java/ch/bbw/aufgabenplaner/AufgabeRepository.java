@@ -5,5 +5,5 @@ import java.util.List;
 
 
 public interface AufgabeRepository extends CrudRepository<Aufgabe, Long> {
-    List<Aufgabe> findByLastname(String lastname);
+    List<Aufgabe> findByBezeichnung(String bezeichnung);
 }

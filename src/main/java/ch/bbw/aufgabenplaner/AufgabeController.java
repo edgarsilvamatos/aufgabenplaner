@@ -10,10 +10,8 @@ import java.util.ArrayList;
 
 @Controller
 public class AufgabeController {
-
     @Autowired
     private AufgabeRepository aufgabeRepository;
-    private ArrayList<Aufgabe> aufgaben = new ArrayList<>();
 
     @GetMapping("/")
     public String form(Model model) {
@@ -23,8 +21,11 @@ public class AufgabeController {
 
     @PostMapping("/aufgabe_hinzugefuegt")
     public String form(Model model, @ModelAttribute Aufgabe finaleAufgabe){
-        aufgaben.add(finaleAufgabe);
-        model.addAttribute("aufgaben", aufgaben);
+        System.out.println("in Post");
+        aufgabeRepository.save(finaleAufgabe);
+        System.out.println("saved");
+        model.addAttribute("aufgaben", aufgabeRepository.findAll());
+        System.out.println("Added model");
         return "result";
     }
 
